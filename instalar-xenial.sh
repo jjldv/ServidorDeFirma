@@ -3,7 +3,7 @@
     hostnamectl set-hostname sellado; 
     apt-get update;     
     apt-get -y install  openjdk-8-jre-headless ca-certificates-java;
-    apt-get -y install openjdk-8-jdk ant ant-optional unzip ntp postgresql-9.5 postgresql-client-9.5 unzip;
+    apt-get -y install openjdk-8-jdk ant ant-optional unzip ntp postgresql postgresql-client unzip;
   
     mkdir -p  /etc/jboss; cd /opt/;
     unzip -q /opt/signserver-ce-4.0.0-bin.zip;
