@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-    timedatectl set-timezone America/El_Salvador;
+    timedatectl set-timezone America/Hermosillo;
     hostnamectl set-hostname sellado; 
     apt-get update;     
     apt-get -y install  openjdk-8-jre-headless ca-certificates-java;
