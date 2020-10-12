@@ -10,13 +10,13 @@ rm -rf client.crt  cliente.jks  clienteSellado.p12  keystore.jks  truststore.jks
 keytool -genkey -v -validity 365 -alias llaveSellado -keyalg RSA \
 -sigalg SHA256withRSA -keysize 2048 -keystore keystore.jks \
 -storepass secreto -keypass secreto \
--dname 'CN=servidorTSA, OU=SETEPLAN, O=Gobierno de El Salvador, C=SV,email=servicio.tsa@tsa.gob.sv' \
+-dname 'CN=servidorTSA, OU=STJ, O=Supremo Tribunal del Estado de Sonora, C=SV,email=servicio.tsa@stjsonora.gob.mx' \
 -ext SAN=dns:tsa.minx.gob.sv;
 
 # Llaves Cliente
 keytool -genkey -keystore cliente.jks -storepass secreto -validity 365 \
 -keyalg RSA -sigalg SHA256withRSA -keysize 2048 -storetype pkcs12 \
--dname 'CN=clienteTSA, OU=SETEPLAN, O=Gobierno de El Salvador, C=SV,email=cliente.tsa@tsa.gob.sv';
+-dname 'CN=clienteTSA, OU=STJ, O=Supremo Tribunal del Estado de Sonora, C=SV,email=cliente.tsa@tsa.gob.sv';
 
 #Exportar llave publica del cliente
 keytool -exportcert -keystore cliente.jks  -storetype pkcs12 -storepass secreto \
